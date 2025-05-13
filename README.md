@@ -3,7 +3,7 @@
 ## Resultado
 ![Preview do Efeito](src/assets/images/preview.gif)
 
-Um efeito de revelação do logo do GTA VI com animações suaves usando GSAP e Lenis para scroll suave.
+Um efeito de revelação através do logo com animações suaves usando GSAP e Lenis para scroll suave.
 
 ## 🚀 Tecnologias Utilizadas
 
