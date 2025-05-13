@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+:root {
+    --color-background: #111117;
+    --color-text: #ffffff;
+    --color-overlay: #111117;
+    
+    --font-family: 'DM Sans', sans-serif;
+    --font-size-h1: 3rem;
+    --font-size-p: 1.25rem;
+    --font-size-small: 0.65rem;
+    
+    --spacing-large: 2rem;
+    --spacing-medium: 1rem;
+    
+    --logo-width: 150px;
+    --logo-height: 150px;
+    --container-width: 200px;
+    --container-height: 150px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: var(--font-size-h1);
+    font-weight: 700;
+    letter-spacing: -0.2rem;
+    line-height: 0.9;
+}
+
+p {
+    text-transform: uppercase;
+    font-size: var(--font-size-p);
+    font-weight: 500;
+    line-height: 0.8;
+}
+
+section {
+    position: relative;
+    width: 100vw;
+    height: 100svh;
+    background-color: var(--color-background);
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-img-container, 
+.hero-img-container img, 
+.fade-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-img-logo img {
+    position: absolute;
+    top: -10%;
+    left: 49%;
+    transform: translate(-50%, 0);
+    width: var(--logo-width);
+    object-fit: contain;
+}
+
+.hero-img-copy {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    will-change: opacity;
+}
+
+.hero-img-copy p {
+    font-size: var(--font-size-small);
+}
+
+.fade-overlay {
+    background-color: var(--color-text);
+    will-change: opacity;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: center 15%;
+    width: 100%;
+    height: 200%;
+    z-index: 1;
+}
+
+.logo-container {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--container-width);
+    height: var(--container-height);
+    z-index: 2;
+}
+
+.overlay-copy {
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+}
+
+.overlay-copy h1 {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    transform-origin: center 0%;
+}
+
+.outro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.libraries {
+    display: flex;
+    gap: var(--spacing-large);
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--spacing-large);
+}
+
+.library-item {
+    width: var(--logo-width);
+    height: var(--logo-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+.library-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.gsap-logo {
+    filter: brightness(0) invert(1);
+}
+
+.overlay-copy h1 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-medium);
+    text-align: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.author-link {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.author-link:hover {
+    opacity: 0.8;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    :root {
+        --font-size-h1: 2.5rem;
+        --font-size-p: 1rem;
+        --logo-width: 120px;
+        --logo-height: 120px;
+    }
+
+    .overlay-copy {
+        bottom: 30%;
+    }
+
+    .libraries {
+        gap: var(--spacing-medium);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-h1: 2rem;
+        --font-size-p: 0.9rem;
+        --logo-width: 100px;
+        --logo-height: 100px;
+    }
+
+    .overlay-copy {
+        bottom: 25%;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --font-size-h1: 1.5rem;
+        --font-size-p: 0.8rem;
+        --logo-width: 80px;
+        --logo-height: 80px;
+    }
+
+    .overlay-copy {
+        bottom: 20%;
+    }
+}
+
