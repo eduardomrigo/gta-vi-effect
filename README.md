@@ -1,7 +1,7 @@
 # GTA VI Logo Reveal Effect
 
 ## Resultado
-![Preview do Efeito](https://gifyu.com/image/bsNMD)
+![Preview do Efeito](src/assets/images/preview.gif)
 
 Um efeito de revelação do logo do GTA VI com animações suaves usando GSAP e Lenis para scroll suave.
 
