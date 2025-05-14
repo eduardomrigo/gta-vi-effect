@@ -23,7 +23,7 @@ Um efeito de revelação através do logo com animações suaves usando GSAP e L
 
 1. Clone o repositório:
 ```bash
-git clone [git@github.com:eduardomrigo/gta-vi-effect.git]
+git clone git@github.com:eduardomrigo/gta-vi-effect.git
 cd gta-vi-effect
 ```
 
